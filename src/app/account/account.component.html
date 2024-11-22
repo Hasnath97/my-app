@@ -1,0 +1,52 @@
+<p>account works!</p>
+<h1>Account</h1>
+<input type="text"[(ngModel)]="term" (keyup)="filter()">
+<select [(ngModel)]="column">
+    <option>Account Name</option>
+    <option>Avialabale Balance Name</option>
+    <option>Account Number</option>
+
+</select>
+<select [(ngModel)]="order">
+    <option >asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">sort</button>
+<!-- pagination -->
+ <select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+ </select>
+ <select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+ </select>
+ <button (click)="pagination()">Pagination</button>
+
+
+<table border="1"  class="table table-dark">
+    <thead>
+        <tr >
+            <th>Account Name</th>
+            <th>Available Balance</th>
+            <th>Account Number</th>
+            <th>Profie Picture</th>
+            <th>Id</th>
+            <th>Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let accoun of account">
+            <td>{{accoun.account_name}}</td>
+            <td>{{accoun.available_balance}}</td>
+            <td>{{accoun.account_number}}</td>
+            <td><img src="{{accoun.profie_picture}}" alt="" width="100px">{{accoun.profie_picture}}</td>
+            <td>{{accoun.id}}</td>
+            <td><button (click)="delete(accoun.id)" class="btn btn-danger">Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>

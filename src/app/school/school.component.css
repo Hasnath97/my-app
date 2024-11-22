@@ -1,0 +1,60 @@
+/* .container{
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+} */
+.card{
+    height: 90%;
+    width: 65%;
+    
+}
+.one{
+    height: 25%;
+    width: 100%;
+    
+    background-color: red;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    color: rgb(216, 196, 196);
+    
+}
+.scname{
+ 
+   height: 50%;
+   width: 70%;
+
+}
+.addr{
+    padding-left: 30px;
+    padding-bottom: 5%;
+}
+.imga{
+    height: 100%;
+    width: 20%;
+    
+
+}
+.two{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    background-color: lightgreen;
+}
+.three{
+    height: 10%;
+    width: 100%;
+    background-color: red;
+}
+button{
+    margin-left: 190px;
+    
+}
+.master{
+    display: flex;
+    flex-wrap: wrap;
+}
+.two2{
+    margin-left: 200px;
+}

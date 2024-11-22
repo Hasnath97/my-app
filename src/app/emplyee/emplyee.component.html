@@ -1,0 +1,24 @@
+<h1>Employee Registration</h1>
+<label for="">Name:</label>
+<input type="text" name="" id="" [(ngModel)]="empName">
+<br>
+<label for="">Role:</label>
+<input type="text" name="" id="" [(ngModel)]="role">
+<button (click)="add()">Add</button>
+<h1>Registered Users</h1>
+<table border="1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>SNO</th>
+            <th>Name</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emplyee of emplyees let i=index">
+            <td>{{i+1}} </td>
+            <td>{{emplyee.name}} </td>
+            <td>{{emplyee.role}} </td>
+        </tr>
+    </tbody>
+</table>

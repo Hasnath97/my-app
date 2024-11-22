@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="one" *ngFor="let weather of weathers">
+        <h1>Wheather In Hyderabad</h1>
+        <div class="circle" [ngClass]="{'blue':weather.current_weather.temperature<0,'yellow':(weather.current_weather.temperature>0 && weather.current_weather.temperature<=30)}"> 
+        </div>
+        <div class="word">
+            <h5 style="color: rgb(219, 219, 38);">Temperature : {{weather.current_weather.temperature}} {{weather.current_weather_units.temperature}} </h5>
+
+            <h5>Wind Speed : {{weather.current_weather.windspeed}} {{weather.current_weather_units.windspeed}} </h5>
+            <h5>Wind Direction : {{weather.current_weather.winddirection}} {{weather.current_weather_units.winddirection}} </h5>
+            <h5>{{weather.current_weather.time | date:"dd/MM/yyyy"}}  </h5>
+
+        </div>
+    
+</div>

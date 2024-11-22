@@ -1,0 +1,13 @@
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.one{
+    height: 50%;
+    width: 24%;
+    background-color: white;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,40 @@
+<div class="master">
+    
+<div class="container" *ngFor="let school of schools">
+    <div class="card">
+        <div class="one">
+            <div class="imga">
+                <img src="{{school.school_logo}}" alt="" width="90px" style="border-radius: 50%;">
+
+            </div>
+            <div class="scname">
+                <h1>{{school.school_name}}</h1>
+
+            </div>
+            <h3 class="addr">{{school.school_city}} {{school.school_pin}}</h3>
+
+
+        </div>
+        <div class="two">
+            <div class="two1">
+                <h4>NAME: {{school.name}} </h4>
+                <h4>Ph.No: {{school.phone}} </h4>
+                <h4>DOB: {{school.dob}} </h4>
+                <h4>CITY: {{school.city}} </h4>
+                <br>
+                <h4>Email: {{school.email}} </h4>
+            </div>
+            <div class="two2">
+                <img src="{{school.profile_picture}}" alt="" width="200px" height="230px">
+            </div>
+
+
+        </div>
+        <div class="three">
+            <button class="btn btn-secondary">View</button>
+            <button class="btn btn-info">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+</div>
+</div>

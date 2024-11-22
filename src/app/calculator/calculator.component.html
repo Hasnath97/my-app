@@ -1,0 +1,17 @@
+<div class="calci">
+    <h2>Calculator</h2>
+    <label for="">Number1:</label><br>
+    <input type="number" name="" id=""  [(ngModel)]="num1">
+    <br>
+    <label for="">Number2:</label>
+    <br>
+    <input type="number" name="" id="" [(ngModel)]="num2">
+    <br>
+    <button [disabled]="!num1 || !num2"    (click)="sum()">Add</button>
+    <button [disabled]="!num1 || !num2"    (click)="sub()">Sub</button>
+    <button [disabled]="!num1 || !num2"    (click)="mul()">Mul</button>
+    <button [disabled]="!num1 || !num2"    (click)="div()">Div</button>
+    <br>
+    <label for="">Result</label>
+    <h3 >{{result}}</h3>
+</div>

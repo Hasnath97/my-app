@@ -1,0 +1,38 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 110%;
+    background-color: black;
+    color: white;
+    font-size: 3px;
+    text-align: center;
+    
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: aquamarine;
+    background-size: cover;
+    justify-content: space-evenly;
+    overflow: auto;
+
+}
+button{
+    background-color:lightseagreen;
+    height: 35px;
+    width: 90px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+h3{
+    cursor: pointer;
+}
+h3:hover{
+    color: bisque;
+    
+}

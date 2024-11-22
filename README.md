@@ -25,3 +25,32 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Directtives: useful to alter DOM
+===========
+1.Structural Directives:
+  *ngFor,8ngIf
+
+
+2.Attribute Directives:
+    ngStyle,ngClass
+
+
+
+    pipes:Useful to alter the data format:
+
+    |uppercase
+    |lowercase
+    |date
+    |date:'yyyy-MM-dd'
+
+ALL POSSIBLE API CALLS:
+=================
+1 all          get          get(URL)
+
+
+2  specific    get          get
+
+3 filtering          get          get(URL?filter=red)
+
+4 pagination         get           get(URL?limit=10&page=1) 

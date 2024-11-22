@@ -1,0 +1,27 @@
+.calci{
+    
+    
+    height: 50%;
+    width: 35%;
+    align-items: center;
+    background-color: rgb(24, 163, 184);
+    margin-left: 25%;
+    margin-top: 20%;
+    
+    border-radius: 20px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    border: rgb(189, 17, 100) solid 5px ;
+}
+input{
+    height: 10%;
+    width: 65%;
+    margin-bottom: 5%;
+}
+button{
+    margin: 2%;
+    background-color: blueviolet;
+    color: whitesmoke;
+    border-radius: 5px;
+}
