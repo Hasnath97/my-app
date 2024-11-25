@@ -33,6 +33,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { SchoolComponent } from './school/school.component';
+import { SocialComponent } from './social/social.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { SchoolComponent } from './school/school.component';
     CreateVehicleComponent,
     CreateAccountComponent,
     SchoolComponent,
+    SocialComponent,
   ],
   imports: [
     BrowserModule,

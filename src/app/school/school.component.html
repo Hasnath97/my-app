@@ -1,40 +1,55 @@
+<input type="text" placeholder="search" [(ngModel)]="term" (keyup)="filter()">
+<select [(ngModel)]="column">
+    <option>Name</option>
+    <option>CITY</option>
+    <option>Email</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">sort</button>
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+</select>
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<button (click)="pagination()">pagination</button>
+
+
 <div class="master">
     
-<div class="container" *ngFor="let school of schools">
-    <div class="card">
+    <div class="card" *ngFor="let school of schools">
         <div class="one">
             <div class="imga">
                 <img src="{{school.school_logo}}" alt="" width="90px" style="border-radius: 50%;">
-
             </div>
             <div class="scname">
                 <h1>{{school.school_name}}</h1>
-
             </div>
             <h3 class="addr">{{school.school_city}} {{school.school_pin}}</h3>
-
-
         </div>
         <div class="two">
             <div class="two1">
-                <h4>NAME: {{school.name}} </h4>
-                <h4>Ph.No: {{school.phone}} </h4>
-                <h4>DOB: {{school.dob}} </h4>
-                <h4>CITY: {{school.city}} </h4>
-                <br>
-                <h4>Email: {{school.email}} </h4>
+                <h6>NAME: {{school.name}} </h6>
+                <h6>Ph.No: {{school.phone}} </h6>
+                <h6>DOB: {{school.dob}} </h6>
+                <h6>CITY: {{school.city}} </h6>
+                <h6>Email: {{school.email}} </h6>
             </div>
             <div class="two2">
-                <img src="{{school.profile_picture}}" alt="" width="200px" height="230px">
+                <img src="{{school.profile_picture}}" alt="" width="200px" height="270px">
             </div>
-
-
         </div>
         <div class="three">
-            <button class="btn btn-secondary">View</button>
+            <button style="float: right;margin-left:70px ;" class="btn btn-secondary">View</button>
             <button class="btn btn-info">Edit</button>
-            <button class="btn btn-danger">Delete</button>
+            <button style="float: left;margin-right: 70px;" class="btn btn-danger" (click)="delete(school.id)">Delete</button>
         </div>
     </div>
-</div>
 </div>
