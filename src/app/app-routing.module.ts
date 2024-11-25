@@ -27,6 +27,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { SchoolComponent } from './school/school.component';
+import { SocialComponent } from './social/social.component';
 
 
 
@@ -59,6 +60,7 @@ const routes: Routes = [
     {path:'create-vehicle',component:CreateVehicleComponent},
     {path:'create-account',component:CreateAccountComponent},
     {path:'school',component:SchoolComponent},
+    {path:'social',component:SocialComponent},
 
 
 

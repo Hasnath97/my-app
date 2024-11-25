@@ -38,6 +38,8 @@ export class AccountComponent {
     this._accountService.getSortedAccounts(this.column,this.order).subscribe(
       (data:any)=>{
         this.account=data;
+        console.log("yes")
+
       },
       (err:any)=>{
         alert("Internal server error");
