@@ -34,6 +34,21 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { SchoolComponent } from './school/school.component';
 import { SocialComponent } from './social/social.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { DummyDisplayComponent } from './dummy-display/dummy-display.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCardModule} from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DailogComponent } from './dailog/dailog.component';
+import { DummyDailogComponent } from './dummy-dailog/dummy-dailog.component';
+import {MatCommonModule} from '@angular/material/core';
+import { CreateUserComponent } from './create-user/create-user.component';
+
 
 @NgModule({
   declarations: [
@@ -67,13 +82,27 @@ import { SocialComponent } from './social/social.component';
     CreateAccountComponent,
     SchoolComponent,
     SocialComponent,
+    DummyDisplayComponent,
+    DailogComponent,
+    DummyDailogComponent,
+    CreateUserComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule, 
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,MatChipsModule,
+    MatDialogModule,MatCommonModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
