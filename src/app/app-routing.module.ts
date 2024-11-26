@@ -28,6 +28,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { SchoolComponent } from './school/school.component';
 import { SocialComponent } from './social/social.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 
 
@@ -61,6 +62,8 @@ const routes: Routes = [
     {path:'create-account',component:CreateAccountComponent},
     {path:'school',component:SchoolComponent},
     {path:'social',component:SocialComponent},
+    {path:'create-user',component:CreateUserComponent},
+
 
 
 

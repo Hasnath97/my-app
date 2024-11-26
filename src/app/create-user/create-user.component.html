@@ -1,0 +1,85 @@
+<p>create-user works!</p>
+
+<form [formGroup]="userForm">
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+        <p class="error" *ngIf="userForm.get('name')?.errors?.['required']">Name is reuired</p>
+        <p class="error" *ngIf="userForm.get('name')?.errors?.['minlength']">Minimum 3 characters</p>
+        <p class="error" *ngIf="userForm.get('name')?.errors?.['maxlength']">Maximum 10 characters</p>
+
+    </div>
+    <br>
+    <label for="">age:</label>
+    <input type="number" formControlName="age">
+    <div *ngIf="userForm.get('age')?.touched && userForm.get('age')?.invalid">
+        <p class="error" *ngIf="userForm.get('age')?.errors?.['required']">Age is reuired</p>
+        <p class="error" *ngIf="userForm.get('age')?.errors?.['min']">Minimum 18 years</p>
+        <p class="error" *ngIf="userForm.get('age')?.errors?.['max']">Maximum 60 years</p>
+
+    </div>
+    <br>
+    <label for="">Email:</label>
+    <input type="text" formControlName="email">
+    <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+        <p class="error" *ngIf="userForm.get('email')?.errors?.['required']">Email is reuired</p>
+        <p class="error" *ngIf="userForm.get('email')?.errors?.['email']">Invalid Email</p>
+        <!-- <p class="error" *ngIf="userForm.get('age')?.errors?.['max']">Maximum 60 years</p> -->
+
+    </div>
+    <br>
+    <label for="">Phone:</label>
+    <input type="number" formControlName="phone">
+    <br>
+    <div formGroupName="address">
+        <label for="">City:</label>
+        <input type="text" formControlName="city">
+        <br>
+        <label for="">Pin:</label>
+        <input type="number" formControlName="pin">
+        <br>
+    </div>
+    <label for="">Type:</label>
+    <input type="radio" formControlName="type" name="type" value="dayScholor">
+    <label for="">DayScholor:</label>
+    <input type="radio" formControlName="type" name="type" value="residentail">
+    <label for="">Residentail:</label>
+    <br>
+
+    <div *ngIf="userForm.get('type')?.value=='dayScholor'">
+        <label for="">Bus Fee:</label>
+        <input type="number" formControlName="busFee">
+        <br>
+    </div>
+    <div *ngIf="userForm.get('type')?.value=='residentail'">
+
+        <label for="">Hostel Fee:</label>
+        <input type="number" formControlName="hostelFee">
+        <br>
+    </div>
+    <label for="">Cards:</label>
+    <button (click)="addCard()">Add Card</button>
+    <br><br>
+
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls;let i=index">
+            <div formGroupName="{{i}}">
+                <h1>Card {{i+1}}</h1>
+                <label for=""> Number:</label>
+                <input type="number" formControlName="number">
+                <br>
+                <label for="">Expiry :</label>
+                <input type="month" formControlName="expiry">
+                <br>
+                <label for="">CVV:</label>
+                <input type="number" formControlName="cvv">
+                <br>
+                <hr>
+
+                <button class="btn btn-danger" (click)="deleteCard(i)">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <button (click)="submit()">submit</button>
+</form>
