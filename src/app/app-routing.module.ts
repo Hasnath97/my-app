@@ -30,6 +30,7 @@ import { SchoolComponent } from './school/school.component';
 import { SocialComponent } from './social/social.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentComponent } from './student/student.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 
 
@@ -37,7 +38,7 @@ import { StudentComponent } from './student/student.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent,children:[
+  {path:'dashboard',canActivate:[AuthenticationGuard], component:DashboardComponent,children:[
     {path:'home',component:HomeComponent},
     {path:'welcome',component:WelcomeComponent},
     {path:'calculator',component:CalculatorComponent},
