@@ -48,6 +48,7 @@ import { DailogComponent } from './dailog/dailog.component';
 import { DummyDailogComponent } from './dummy-dailog/dummy-dailog.component';
 import {MatCommonModule} from '@angular/material/core';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentComponent } from './student/student.component';
 
 
 @NgModule({
@@ -86,6 +87,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
     DailogComponent,
     DummyDailogComponent,
     CreateUserComponent,
+    StudentComponent,
     
   ],
   imports: [

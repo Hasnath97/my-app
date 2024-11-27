@@ -1,0 +1,67 @@
+<p>student works!</p>
+<form [formGroup]="marksForm">
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label for="">Class:</label>
+    <input type="text" formControlName="class">
+    <br>
+    <label for="">Father Name:</label>
+    <input type="text"formControlName="fatherName">
+    <br>
+    <label for="">email:</label>
+    <input type="email" formControlName="email">
+    <br>
+    <label for="">DOB:</label>
+    <input type="date" formControlName="dob">
+    <br>
+    <div formGroupName="address">
+        <label for="">Address Line:</label>
+        <input type="text"formControlName="addressLine">
+        <br>
+        <label for="">City:</label>
+        <input type="text"formControlName="city">
+        <br>
+        <label for="">State:</label>
+        <input type="text"formControlName="state">
+        <br>
+        <label for="">Pin Code:</label>
+        <input type="text"formControlName="pin">
+        <br>
+    </div>
+    <label for="">Type:</label>
+    <input type="radio" formControlName="type" name="type" value="dayScholor">
+    <label for="">DayScholor:</label>
+    <input type="radio" formControlName="type" name="type" value="residentail">
+    <label for="">Residentail:</label>
+    <br>
+    <div *ngIf="marksForm.get('type')?.value=='dayScholor'">
+        <label for="">Bus Fee:</label>
+        <input type="number" formControlName="name">
+        <br>
+    </div>
+    <div *ngIf="marksForm.get('type')?.value=='residentail'">
+        <label for="">Hostel Fee:</label>
+        <input type="number" formControlName="name">
+        <br>
+    </div>
+    <label for="">Marks:</label>
+        <button (click)="addMarks()">Add MArks</button>
+        <br><br>
+    <div>
+        <div>
+            <div>
+                <h1>Marks</h1>
+                <label for="">Class</label>
+                <input type="number" formControlName="class">
+                <br>
+                <label for="">Year</label>
+                <input type="number"formControlName="year" >
+                <br>
+                <label for="">Percentage</label>
+                <input type="number"formControlName="percentage" >
+                <br>
+            </div>
+        </div>
+    </div>
+</form>
