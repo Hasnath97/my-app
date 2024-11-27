@@ -1,32 +1,79 @@
-.container{
-    height: 100%;
-    width: 100%;
+/* Container for the entire form */
+.parent {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.form{
-    height: 40%;
-    width: 40%;
-    background-color: aqua;
-    margin-top: 10%;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 20px;
-}
-input{
-    margin-bottom: 10%;
-}
-button{
-    background-color: bisque;
-
-}
-input{
-    height: 30px;
-    width: 150px;
-}
-body{
-    background-image: radial-gradient(pink,skyblue);
-    height: 100vh;
-    width: 100vw;
-}
+    justify-content: center; /* Centering the form horizontally */
+    align-items: center; /* Centering the form vertically */
+    height: 100vh; /* Take full viewport height */
+    background-color: #f4f4f9; /* Light background for contrast */
+    padding: 20px; /* Add some padding */
+  }
+  
+  /* Form styling */
+  form {
+    background-color: #fff; /* White background for the form */
+    padding: 30px; /* Space around form elements */
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 400px; /* Form width constraint */
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* Dark gray text */
+    margin-bottom: 8px; /* Space below label */
+    display: block; /* Ensure label appears above the input */
+  }
+  
+  /* Input field styling */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%; /* Make input fields take up full width */
+    padding: 12px; /* Space inside the input fields */
+    margin: 8px 0 20px 0; /* Space between fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners for inputs */
+    font-size: 14px; /* Font size */
+  }
+  
+  /* Input focus effect */
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #5c9df4; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(92, 157, 244, 0.6); /* Add subtle glow effect */
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #5c9df4; /* Blue background color */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    padding: 12px 20px; /* Adequate padding */
+    width: 100%; /* Full-width button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Slightly larger text */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #3b8ad9; /* Darker blue on hover */
+  }
+  
+  /* Button: Disabled state */
+  button:disabled {
+    background-color: #ccc; /* Light gray when disabled */
+    cursor: not-allowed; /* Indicate button is not clickable */
+  }
+  
+  /* Optional: Add error messages or form validation styling */
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
