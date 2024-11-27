@@ -29,6 +29,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { SchoolComponent } from './school/school.component';
 import { SocialComponent } from './social/social.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentComponent } from './student/student.component';
 
 
 
@@ -63,6 +64,7 @@ const routes: Routes = [
     {path:'school',component:SchoolComponent},
     {path:'social',component:SocialComponent},
     {path:'create-user',component:CreateUserComponent},
+    {path:'student',component:StudentComponent},
 
 
 
